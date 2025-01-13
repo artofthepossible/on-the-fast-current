@@ -90,11 +90,13 @@ The Dashboard also provides access to:</br>
 ```sh
 For configuring Docker Desktop
 ```
+![Settings](./images/settings.png)
 
 **Troubleshoot menu**
 ```sh
 For debugging and performing restart operations
 ```
+![Troubleshoot](./images/troubleshoot.png)
 
 **Pro Tips Commands**
 ```sh
@@ -130,6 +132,13 @@ A key feature of Docker Desktop that is located in the Dashboard header.
 This allows you to search for containers, images, extensions, volumes, and even Docker documentation.
 ```
 ![Quick Search ](./images/quick-search.png)
+
+**Extensions**
+```sh
+Docker Extensions are a feature in Docker Desktop, to connect the common tasks and workflows that a developer work on
+They extend the functionality of your common developer tools and help your developers to glean better insights, integration and automation when building containers
+```
+![Extensions ](./images/extensions.png)
 
 
 
