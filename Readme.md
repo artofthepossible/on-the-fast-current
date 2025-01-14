@@ -61,7 +61,9 @@ You can enable Docker Debug to execute commands, run the container.
 ![Docker Debug View](./images/dockerdebug-view.png)
 
 ```sh
-For our sample application with a flask frontend and mongo backend defined as servicees in the compose.yaml file, we can, we can view configurations via the 
+For our sample application with a flask frontend and mongo backend defined as servicees in the compose.yaml file, we can, we can view configurations via the compose file viewer.</br>
+We can use docker compose up -d to start the entire application
+
 ```
 **compose file viewer**
 ![Compose Viewer](./images/composeviewer.png)
@@ -70,12 +72,17 @@ For our sample application with a flask frontend and mongo backend defined as se
 ```sh
 Here you can see a list of your Docker images, run images as containers, pull the latest versions from Docker Hub, and inspect images.
 It also shows image vulnerabilities and clean-up options.
+You can explore the image hierarch including the layers that make up your iamge
 ```
 ![Images Viewer](./images/images-view.png)
 
 **Volumes view**: 
 ```sh
 This displays a list of volumes and allows you to create, delete, and see which ones are being used.
+Creates and manages Docker volumes on the host system. 
+We can use volumes to mount data in the volume mount
+
+We can use this along with compose watch to mount our code base and be able to view the changes locally
 ```
 ![Volume Viewer](./images/volume-view.png)
 
@@ -83,6 +90,18 @@ This displays a list of volumes and allows you to create, delete, and see which 
 ```sh
 You can inspect your build history and manage builders here.
 ```
+![Builds View](./images/builds-view.png)
+View build details: docker-desktop://dashboard/build/desktop-linux/desktop-linux/jx1vug9kxl9zmlazq96y355dp
+
+Docker Build Cloud is a service that allows you to build your container images faster, both locally and in CI (Continuous Integration) environments. The builds run on cloud infrastructure that is optimally dimensioned for your workloads, with no configuration required. The service uses a remote build cache, ensuring fast builds anywhere and for all team members.
+
+Within the info tab, you can view the build start and end time and Total build time</br>
+You can view the tag and digest details</br>
+You can get a sense of the cached and non cached steps</br>
+
+Lets drill into the source tab, which shows you the docker file in use</br>
+We can aslo look at the logs which helps you triage and log dive into the container build</br>
+We can also glean the historical details of the builds for a specific image
 
 The Dashboard also provides access to:</br>
 
